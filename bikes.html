@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bike Rental</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="top-bar">
+🚲 City Bike Rental
+</header>
+
+<nav class="navbar">
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="login.html">Login</a></li>
+<li><a href="signup.html">Signup</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+
+<section class="bikes-section">
+
+<h2>Available Bikes</h2>
+
+<div id="bikeContainer" class="bike-container"></div>
+
+</section>
+
+<!-- Modal -->
+<div id="bikeModal" class="modal">
+
+<div class="modal-content">
+
+<span class="close">&times;</span>
+
+<img id="modalImg">
+
+<h2 id="modalModel"></h2>
+
+<p id="modalManuf"></p>
+
+<p id="modalGear"></p>
+
+<p id="modalDetails"></p>
+
+<p id="modalSize"></p>
+
+</div>
+
+</div>
+
+<script src="bikes.js"></script>
+
+</body>
+</html>

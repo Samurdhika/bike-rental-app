@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Rent Bike</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<header class="top-bar">
+🚲 City Bike Rental
+</header>
+
+<nav class="navbar">
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="login.html">Login</a></li>
+<li><a href="signup.html">Signup</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+
+
+<div class="rent-container">
+
+<h2>Rent This Bike</h2>
+
+<img id="bikeImg">
+
+<h3 id="bikeName"></h3>
+
+
+<form id="rentForm">
+
+<div class="form-group">
+<input type="text" placeholder="Your Name" required>
+</div>
+
+<div class="form-group">
+<input type="email" placeholder="Email" required>
+</div>
+
+<div class="form-group">
+<label>Start Date</label>
+<input type="date" required>
+</div>
+
+<div class="form-group">
+<label>End Date</label>
+<input type="date" required>
+</div>
+
+<button type="submit">Confirm Rental</button>
+
+</form>
+
+</div>
+
+
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+const bikeId = params.get("id");
+
+const apiURL = "https://corsproxy.io/?https://www.cc.puv.fi/~hmh/fed/fedApi/bikes?id=" + bikeId;
+
+fetch(apiURL)
+.then(res => res.json())
+.then(bike => {
+
+document.getElementById("bikeImg").src = bike.img_url;
+document.getElementById("bikeName").innerText = bike.model;
+
+});
+
+
+document.getElementById("rentForm").onsubmit = function(e){
+
+e.preventDefault();
+
+alert("Bike successfully rented!");
+
+window.location.href = "index.html";
+
+}
+
+</script>
+
+</body>
+</html>

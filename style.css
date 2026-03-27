@@ -1,0 +1,308 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+html,body{
+height:100%;
+}
+
+/* Page Layout */
+
+body{
+display:flex;
+flex-direction:column;
+min-height:100vh;
+background:#f4f4f4;
+}
+
+/* Top Header */
+
+.top-bar{
+background:#FF0087;
+color:white;
+text-align:center;
+padding:15px;
+font-size:24px;
+font-weight:bold;
+}
+
+/* Navigation Bar */
+
+.navbar{
+background:#FF7DB0;
+padding:15px;
+}
+
+.nav-links{
+list-style:none;
+display:flex;
+justify-content:center;
+gap:40px;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+font-size:18px;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:#00F7FF;
+}
+
+/* Hero Section */
+
+.hero{
+height:85vh;
+background-image:url("biking-adventure-friends-stockcake.webp");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero-text{
+background:rgba(0,0,0,0.4);
+padding:40px;
+border-radius:15px;
+color:white;
+}
+
+.hero-text h1{
+font-size:45px;
+margin-bottom:10px;
+}
+
+.hero-text p{
+font-size:20px;
+margin-bottom:20px;
+}
+
+/* Buttons */
+
+button,
+.rent-btn{
+padding:12px 25px;
+background:#00F7FF;
+border:none;
+color:white;
+border-radius:6px;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover,
+.rent-btn:hover{
+background:#00F7FF;
+}
+
+/* Bikes Section */
+
+.bikes-section{
+padding:50px;
+text-align:center;
+}
+
+.bike-container{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 25px;
+padding: 30px;
+max-width: 1200px;
+margin: auto;
+}
+
+.bike-card{
+width:220px;
+background:white;
+padding:15px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+cursor:pointer;
+transition:0.3s;
+}
+
+.bike-card:hover{
+transform:translateY(-8px);
+}
+
+.bike-card img{
+width:100%;
+height:150px;
+object-fit:cover;
+border-radius:8px;
+}
+
+/* MODAL */
+
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+justify-content:center;
+align-items:center;
+}
+
+.modal-content{
+background:white;
+padding:30px;
+width:400px;
+border-radius:10px;
+text-align:center;
+}
+
+.modal-content img{
+width:100%;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+.close{
+float:right;
+font-size:28px;
+cursor:pointer;
+}
+
+.rent-btn{
+margin-top:10px;
+padding:8px 15px;
+border:none;
+background:#00F7FF;
+color:white;
+border-radius:6px;
+cursor:pointer;
+font-size:14px;
+}
+
+.rent-btn:hover{
+background:#00F7FF;
+}
+
+
+/* Form Pages */
+
+.form-container{
+width:350px;
+margin:80px auto;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+text-align:center;
+}
+
+.form-container h2{
+margin-bottom:20px;
+}
+
+.form-container input,
+.form-container select,
+.form-container textarea{
+width:100%;
+padding:10px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+textarea{
+height:100px;
+resize:none;
+}
+
+/* Contact Page Map */
+
+.map{
+padding:60px;
+text-align:center;
+background:#f5f5f5;
+}
+
+/* Footer */
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:auto;
+}
+
+/* Mobile Responsive */
+
+@media (max-width:768px){
+
+.nav-links{
+flex-direction:column;
+gap:15px;
+align-items:center;
+}
+
+.hero-text h1{
+font-size:30px;
+}
+
+.hero-text p{
+font-size:16px;
+}
+
+.bike-container{
+flex-direction:column;
+align-items:center;
+}
+
+.form-container{
+width:90%;
+}
+
+}
+
+/*rental */
+
+.rent-container{
+max-width:600px;
+margin:50px auto;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+.rent-container img{
+width:250px;
+margin-bottom:20px;
+}
+
+.rent-container input{
+width:90%;
+padding:10px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+.rent-container button{
+padding:10px 20px;
+background:#00F7FF;
+color:white;
+border:none;
+border-radius:6px;
+cursor:pointer;
+font-size:16px;
+}
+
+.rent-container button:hover{
+background:#00F7FF;
+}

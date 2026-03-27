@@ -179,14 +179,14 @@ margin-top:10px;
 padding:8px 15px;
 border:none;
 background:#00F7FF;
-color:white;
+color:black;
 border-radius:6px;
 cursor:pointer;
 font-size:14px;
 }
 
 .rent-btn:hover{
-background:#00F7FF;
+background:#FF0087;
 }
 
 
@@ -232,7 +232,7 @@ background:#f5f5f5;
 /* Footer */
 
 footer{
-background:#222;
+background:#FF0087;
 color:white;
 text-align:center;
 padding:15px;
